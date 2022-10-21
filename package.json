@@ -1,22 +1,18 @@
 {
   "name": "gojom-tech-test",
+  "private": true,
   "version": "1.0.0",
-  "main": "index.js",
-  "type": "module",
   "scripts": {
     "dev": "vite",
-    "build": "tsc && vite build",
+    "build": "vite build",
     "preview": "vite preview"
   },
   "devDependencies": {
     "autoprefixer": "^10.4.12",
     "postcss": "^8.4.18",
     "tailwindcss": "^3.2.1",
-    "typescript": "^4.6.4",
     "vite": "^3.1.8"
   },
   "repository": "https://github.com/OrlandoBricenoB/gojom-tech-test.git",
-  "author": "orlandobriceno <orlando.briceno.blanco@gmail.com>",
-  "license": "MIT",
-  "private": true
+  "author": "orlandobriceno <orlando.briceno.blanco@gmail.com>"
 }

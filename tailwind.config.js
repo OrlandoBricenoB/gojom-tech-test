@@ -1,11 +1,6 @@
-const colors = require('tailwindcss/colors')
-
 module.exports = {
-  purge: [
-    './src/**/*.{html,js}'
-  ],
   presets: [],
-  darkMode: false,
+  darkMode: 'media',
   theme: {
     screens: {
       sm: '640px',
@@ -17,19 +12,7 @@ module.exports = {
     colors: {
       transparent: 'transparent',
       current: 'currentColor',
-
-      primary: '#FFD370',
-
-      black: colors.black,
-      white: colors.white,
-      gray: colors.coolGray,
-      red: colors.red,
-      yellow: colors.amber,
-      green: colors.emerald,
-      blue: colors.blue,
-      indigo: colors.indigo,
-      purple: colors.violet,
-      pink: colors.pink
+      primary: '#21c2e1'
     },
     spacing: {
       px: '1px',
