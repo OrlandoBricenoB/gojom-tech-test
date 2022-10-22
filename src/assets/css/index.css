@@ -1,3 +1,15 @@
-body {
-  font-family: 'Lexend'
+html, body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Lexend';
+  height: 100%
+}
+
+#map {
+  margin: 0;
+  height: 100%;
+}
+
+h1, h2, h3 {
+  font-weight: normal;
 }
