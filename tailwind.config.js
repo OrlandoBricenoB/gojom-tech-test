@@ -1,5 +1,6 @@
 module.exports = {
   presets: [],
+  content: ['./src/**/*.{html,js}'],
   darkMode: 'media',
   theme: {
     screens: {
