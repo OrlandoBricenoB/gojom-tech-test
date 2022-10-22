@@ -3,25 +3,22 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="icon" type="image/svg+xml" href="./src/image/favicon.svg" />
+    <link rel="icon" type="image/svg+xml" href="/src/image/favicon.svg" />
     <title>Gojom Tech Test - Orlando Briceño</title>
     <link rel="preconnect" href="https://fonts.gstatic.com" />
     <link
       href="https://fonts.googleapis.com/css2?family=Lexend"
       rel="stylesheet"
     />
+    <script type="module" src="/src/main.js"></script>
   </head>
   <body>
-    <div>
-      <!-- Title -->
-      <h1
-        id="title"
-        class="mt-2 mb-6 text-center text-4xl md:text-5xl font-bold"
-      >
-        Test
-      </h1>
-      <!-- Title END -->
-    </div>
-    <script type="module" src="/src/main.js"></script>
+    <!-- Map -->
+    <div id="map"></div>
+
+    <script
+      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAGkwsdfdSYLCmkWVl7fgtQCm2zzJ5qwB8&callback=initMap&libraries=marker&v=beta"
+      defer
+    ></script>
   </body>
 </html>
