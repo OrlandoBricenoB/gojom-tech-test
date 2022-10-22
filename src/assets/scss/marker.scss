@@ -4,12 +4,22 @@
   align-items: center;
   gap: .25rem;
   padding: .35rem .75rem;
-  
+
   background-color: #070A2B;
   color: #FFFFFF;
   border-radius: 1rem;
   font-size: .75rem;
   position: relative;
+  cursor: pointer;
+  transition: .2s ease filter, .2s ease transform;
+  &:hover {
+    filter: brightness(.9);
+    transform: scale(1.05)
+  }
+  &:active {
+    filter: brightness(.9);
+    transform: scale(0.95)
+  }
 }
 
 .currency-unit {
