@@ -1,0 +1,22 @@
+.markerContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: .25rem;
+  padding: .35rem .75rem;
+  
+  background-color: #070A2B;
+  color: #FFFFFF;
+  border-radius: 1rem;
+  font-size: .75rem;
+  position: relative;
+}
+
+.currency-unit {
+  color: #55da1e
+}
+
+.currency-unit,
+.currency-value {
+  font-weight: bold
+}

@@ -8,7 +8,7 @@ const CustomMarker = ({
   AdvancedMarkerView
 }) => {
   const popupEl = document.createElement('div')
-  popupEl.classList.add('popupContainer')
+  popupEl.classList.add('markerContainer')
   popupEl.setAttribute('id', id)
   popupEl.innerHTML = htmlContent
 
