@@ -3,7 +3,7 @@
   "private": true,
   "version": "1.0.0",
   "scripts": {
-    "dev": "vite",
+    "dev": "vite --host",
     "build": "vite build",
     "preview": "vite preview"
   },
@@ -16,6 +16,7 @@
   "repository": "https://github.com/OrlandoBricenoB/gojom-tech-test.git",
   "author": "orlandobriceno <orlando.briceno.blanco@gmail.com>",
   "dependencies": {
-    "@googlemaps/markerclusterer": "^2.0.13"
+    "@googlemaps/markerclusterer": "^2.0.13",
+    "lodash": "^4.17.21"
   }
 }
