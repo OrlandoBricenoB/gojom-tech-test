@@ -1,7 +1,7 @@
 import { capitalize, isEmpty } from 'lodash'
 import { characteristicsMap, displayCharacteristic } from './estateCharacteristic'
-import { getEstateOne } from '../utils/Database'
-import observer from '../utils/Observer'
+import { getEstateOne } from '../api/Database'
+import observer from '../api/Observer'
 
 // * Elemento del drawer
 const drawerEl = document.querySelector('.drawer')

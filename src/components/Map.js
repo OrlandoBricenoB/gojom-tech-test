@@ -1,4 +1,4 @@
-import { getCentralGeoPoint, getRestrictGeoBoundingBox } from './Database'
+import { getCentralGeoPoint, getRestrictGeoBoundingBox } from '../api/Database'
 
 const Map = mapEl => {
   const centralGeoPoint = getCentralGeoPoint()

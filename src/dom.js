@@ -1,6 +1,6 @@
 import { clone, debounce, isEmpty } from 'lodash'
 import { filterArrray, appendArray } from './utils/handleArrays'
-import observer from './utils/Observer'
+import observer from './api/Observer'
 
 // * Debounce notify list change.
 const debounceNotify = debounce(listName => {

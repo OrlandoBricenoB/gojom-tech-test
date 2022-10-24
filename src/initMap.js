@@ -2,12 +2,12 @@ import { MarkerClusterer } from '@googlemaps/markerclusterer'
 import {
   getEstatePosition,
   getRealEstate
-} from './Database'
-import Map from './Map'
-import CustomMarker from './CustomMarker'
-import DefaultMarker from './DefaultMarker'
-import displayMarkers from './displayMarkers'
-import observer from './Observer'
+} from './api/Database'
+import Map from './components/Map'
+import CustomMarker from './components/CustomMarker'
+import DefaultMarker from './components/DefaultMarker'
+import displayMarkers from './utils/displayMarkers'
+import observer from './api/Observer'
 
 // * Global
 window.estateTypes = ['alquilar', 'comprar']
@@ -43,6 +43,7 @@ function initMap () {
       position: getEstatePosition(estate),
       isVisible: false
     }))
+    window.markersIDList = defaultMarkers.map(marker => marker.internal_id)
 
     // * Clusterer
     const cluster = new MarkerClusterer({

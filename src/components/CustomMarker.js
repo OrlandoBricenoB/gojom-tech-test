@@ -1,9 +1,9 @@
 import moonIcon from '../svgs/moon'
 import triangleIcon from '../svgs/triangle'
 import dropletIcon from '../svgs/droplet'
-import cleanCharacteristicValue from './cleanCharacteristicValue'
-import { getEstatePosition } from './Database'
-import observer from './Observer'
+import cleanCharacteristicValue from '../utils/cleanCharacteristicValue'
+import { getEstatePosition } from '../api/Database'
+import observer from '../api/Observer'
 
 const CustomMarker = ({
   id,
