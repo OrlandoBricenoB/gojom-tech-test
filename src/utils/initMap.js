@@ -23,7 +23,7 @@ function initMap () {
   const initializeMarkers = () => {
     // * Filter markers for initialize.
     const filteredRealEstate = estateData.filter(estate => {
-      return estateTypes.includes(estate.operation_type)
+      return window.estateTypes.includes(estate.operation_type)
     })
 
     // * Custom Markers with HTML
@@ -39,7 +39,7 @@ function initMap () {
     const defaultMarkers = filteredRealEstate.map(estate => DefaultMarker({
       internal_id: estate.internal_id,
       map,
-      Marker: google.maps.Marker,
+      Marker: window.google.maps.Marker,
       position: getEstatePosition(estate),
       isVisible: false
     }))
