@@ -9,11 +9,17 @@
   },
   "devDependencies": {
     "autoprefixer": "^10.4.12",
+    "eslint": "^8.26.0",
+    "eslint-config-standard": "^17.0.0",
+    "eslint-plugin-import": "^2.26.0",
+    "eslint-plugin-n": "^15.3.0",
+    "eslint-plugin-promise": "^6.1.1",
     "postcss": "^8.4.18",
     "prettier": "^2.7.1",
     "sass": "^1.55.0",
     "tailwindcss": "^3.2.1",
     "vite": "^3.1.8",
+    "vite-plugin-eslint": "^1.8.1",
     "vite-plugin-sass-dts": "^1.1.44"
   },
   "repository": "https://github.com/OrlandoBricenoB/gojom-tech-test.git",
