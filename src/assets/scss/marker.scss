@@ -39,6 +39,7 @@
   width: 250%;
   color: #070A2B;
   transform: scale(0);
+  transform-origin: bottom;
   transition: .2s ease transform;
   z-index: 10000
 }
