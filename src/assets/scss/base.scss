@@ -34,3 +34,18 @@ main {
   display: grid;
   grid-template-columns: auto 1fr;
 }
+
+/*
+  * Mark
+*/
+.mark__list {
+  transform-origin: right top;
+  transform: scale(0);
+  transition: .2s ease transform
+}
+
+.mark:hover {
+  & .mark__list {
+    transform: scale(1);
+  }
+}
