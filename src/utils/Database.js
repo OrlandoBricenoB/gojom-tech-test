@@ -33,8 +33,8 @@ export const getRealEstate = () => {
   return gojomData.properties.map(property => ({
     ...property.location,
     ...pick(property, [
-      'title', 
-      'internal_id', 
+      'title',
+      'internal_id',
       'formatted_usd_price',
       'usd_price',
       'bathrooms',

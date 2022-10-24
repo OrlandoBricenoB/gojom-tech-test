@@ -35,7 +35,7 @@ observer.subscribe({
     console.log({ estateData })
     if (isEmpty(estateData)) return observer.notify('drawer', { status: false })
 
-    const drawerHeader = 
+    const drawerHeader =
       `<!-- Estate Type and Operation -->
       <div class="flex items-center justify-between mb-3">
         <div class="flex gap-3">
@@ -78,7 +78,7 @@ observer.subscribe({
             <p class="text-lg text-green-600">${estateData.formatted_usd_price}</p>
             <p class="text-sm text-gray-400">${estateData.formatted_local_price}</p>
           </div>
-          ${estateData.formatted_local_price_by_m2 
+          ${estateData.formatted_local_price_by_m2
             ? `<div>
                 <p class="text-gray-600">Precio m<sup>2</sup></p>
                 <p class="text-lg text-green-600">${estateData.formatted_usd_price_by_m2}</p>
@@ -104,9 +104,9 @@ observer.subscribe({
         </div>
         <!-- Estate Little Characteristics END -->
       </div>
-      <!-- Estate Information END -->`    
+      <!-- Estate Information END -->`
 
-    drawerEl.innerHTML = 
+    drawerEl.innerHTML =
       `${drawerHeader}
       ${drawerTitle}
       ${drawerInformation}`
@@ -117,6 +117,6 @@ observer.subscribe({
       observer.notify('drawer', { status: false })
     })
 
-    feather.replace()
+    window.feather.replace()
   }
 })

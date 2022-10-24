@@ -30,7 +30,7 @@ export const characteristicsMap = [
     name: 'Área Techada',
     key: 'build_area',
     icon: 'triangle'
-  },
+  }
 ]
 
 export const displayCharacteristic = ({ key, name, icon }, estateData) => {

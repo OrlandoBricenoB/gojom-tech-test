@@ -12,7 +12,7 @@ const DefaultMarker = ({
     strokeWeight: 0,
     rotation: 0,
     scale: 2,
-    anchor: new google.maps.Point(15, 30)
+    anchor: new window.google.maps.Point(15, 30)
   }
 
   const marker = new Marker({

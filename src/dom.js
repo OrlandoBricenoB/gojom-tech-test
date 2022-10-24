@@ -27,7 +27,7 @@ badgeTags.forEach(badgeTag => {
     const existInList = clonedList.find(listItem => listItem === value)
 
     // * Set new value for global list.
-    window[listName] = existInList 
+    window[listName] = existInList
       ? filterArrray(clonedList, item => item !== value)
       : appendArray(clonedList, value)
 

@@ -4,7 +4,7 @@ const Map = mapEl => {
   const centralGeoPoint = getCentralGeoPoint()
   const restrictGeoBoundingBox = getRestrictGeoBoundingBox()
 
-  return new google.maps.Map(mapEl, {
+  return new window.google.maps.Map(mapEl, {
     zoom: 10,
     center: centralGeoPoint,
     restriction: restrictGeoBoundingBox,

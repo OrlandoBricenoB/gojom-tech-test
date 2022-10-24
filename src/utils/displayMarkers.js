@@ -6,7 +6,6 @@ const displayMarkers = ({ markers, defaultMarkers, map }) => {
 
     // * Display CustomMarker if defaultMarker is visible.
     marker.map = defaultMarker?.map ? map : null
-    return
   })
 }
 

@@ -18,14 +18,14 @@ const CustomMarker = ({
     bedrooms,
     address,
     bathrooms,
-    total_area
+    total_area: totalArea
   } = data
 
   const popupContainer = document.createElement('div')
 
   const informationEl = document.createElement('div')
   informationEl.classList.value = 'flex items-center gap-2 p-2 bg-white rounded-lg markerInformation'
-  informationEl.innerHTML = 
+  informationEl.innerHTML =
   `<div>
     <img
       width="64"
@@ -37,24 +37,30 @@ const CustomMarker = ({
     <p class="font-bold whitespace-nowrap text-ellipsis overflow-hidden">${title}</p>
     ${address ? `<p class="text-xs text-gray-500">${address}</p>` : ''}
     <div class="flex flex-wrap items-center gap-x-2 text-xs">
-      ${bedrooms ? `<div class="flex items-center gap-1 svg-small">
+      ${bedrooms
+? `<div class="flex items-center gap-1 svg-small">
         <p>
           ${cleanCharacteristicValue('bedrooms', bedrooms)}
         </p>
         ${moonIcon()}
-      </div>`: ''}
-      ${bathrooms ? `<div class="flex items-center gap-1 svg-small">
+      </div>`
+ : ''}
+      ${bathrooms
+? `<div class="flex items-center gap-1 svg-small">
         <p>
           ${cleanCharacteristicValue('bathrooms', bathrooms)}
         </p>
         ${dropletIcon()}
-      </div>`: ''}
-      ${total_area ? `<div class="flex items-center gap-1 svg-small">
+      </div>`
+ : ''}
+      ${totalArea
+? `<div class="flex items-center gap-1 svg-small">
         <p>
-          ${cleanCharacteristicValue('total_area', total_area)}
+          ${cleanCharacteristicValue('total_area', totalArea)}
         </p>
         ${triangleIcon()}
-      </div>`: ''}
+      </div>`
+ : ''}
     </div>
   </div>`
 

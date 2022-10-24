@@ -9,10 +9,10 @@ import DefaultMarker from './DefaultMarker'
 import displayMarkers from './displayMarkers'
 import observer from './Observer'
 
-// * Global 
+// * Global
 window.estateTypes = ['alquilar', 'comprar']
 
-function initMap() {
+function initMap () {
   // * Initialize Map
   const map = Map(document.getElementById('map'))
 
@@ -32,9 +32,9 @@ function initMap() {
       map,
       data: estate,
       htmlContent: estate.formatted_usd_price,
-      AdvancedMarkerView: google.maps.marker.AdvancedMarkerView
+      AdvancedMarkerView: window.google.maps.marker.AdvancedMarkerView
     }))
-  
+
     // * Default Markers for Create Clusters
     const defaultMarkers = filteredRealEstate.map(estate => DefaultMarker({
       internal_id: estate.internal_id,
@@ -45,7 +45,7 @@ function initMap() {
     }))
 
     // * Clusterer
-    new MarkerClusterer({
+    MarkerClusterer({
       markers: defaultMarkers,
       map
     })
@@ -61,7 +61,7 @@ function initMap() {
   // * Create markers with Real Estate Data.
   const [
     markers,
-    defaultMarkers,
+    defaultMarkers
   ] = initializeMarkers()
 
   // * Interactive Display Markers when move screen or zoom.
