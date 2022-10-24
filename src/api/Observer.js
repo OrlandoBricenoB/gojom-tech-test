@@ -41,7 +41,6 @@ class Observer {
   notify = (name, data) => {
     this.subscriptors.forEach(_sub => {
       if (_sub.name === name && isFunction(_sub.callback)) {
-        console.log({ data }, 'llamar callback')
         _sub.callback(data)
       }
     })

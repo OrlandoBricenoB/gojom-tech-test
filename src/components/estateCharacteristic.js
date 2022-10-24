@@ -45,3 +45,13 @@ export const displayCharacteristic = ({ key, name, icon }, estateData) => {
   </div>
   <!-- Characteristic END -->`
 }
+
+export const displayCharacteristicMinify = ({ key, icon }, estateData) => {
+  if (!estateData[key]) return ''
+  return `<!-- Characteristic -->
+  <div class="flex items-center gap-2 text-gray-500">
+    <i data-feather="${icon}"></i>
+    <p class="text-gray-800">${cleanCharacteristicValue(key, estateData[key])}</p>
+  </div>
+  <!-- Characteristic END -->`
+}
