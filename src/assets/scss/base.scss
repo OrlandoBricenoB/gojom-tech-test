@@ -1,7 +1,7 @@
 html, body {
   margin: 0;
   padding: 0;
-  font-family: 'Lexend';
+  font-family: 'Rubik';
   height: 100%
 }
 
@@ -18,7 +18,8 @@ h1, h2, h3 {
   * HEADER
 */
 header {
-  padding: .75rem 1rem
+  padding: .75rem 1rem;
+  border: 1px solid #ddd
 }
 
 /*
@@ -27,4 +28,9 @@ header {
 #map, main {
   margin: 0;
   height: 100%
+}
+
+main {
+  display: grid;
+  grid-template-columns: auto 1fr;
 }
