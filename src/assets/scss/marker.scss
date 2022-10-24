@@ -21,15 +21,15 @@
     filter: brightness(.9);
     transform: scale(0.95)
   }
-}
 
-.currency-unit {
-  color: #55da1e
-}
-
-.currency-unit,
-.currency-value {
-  font-weight: bold
+  & .currency-unit {
+    color: #55da1e
+  }
+  
+  & .currency-unit,
+  & .currency-value {
+    font-weight: bold
+  }
 }
 
 .markerInformation {
@@ -40,7 +40,7 @@
   color: #070A2B;
   transform: scale(0);
   transition: .2s ease transform;
-  z-index: 10000000
+  z-index: 10000
 }
 
 .markerInformation--open {
