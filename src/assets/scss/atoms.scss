@@ -1,134 +1,103 @@
 /*
-  * BADGE
+  * Tags
+*/
+.tag {
+  background-color: #ddd;
+  font-size: .9rem;
+  transition: .2s ease transform
+}
+
+.tag:hover {
+  filter: brightness(.9)
+}
+
+.tag:active {
+  transform: scale(.95)
+}
+
+/*
+  * Badge
 */
 .badge {
   border: 1px solid #ddd;
-  padding: .35rem .75rem;
+  padding: 0rem .75rem;
   border-radius: 1rem;
+  
   text-align: center;
-  span[contenteditable="true"]:focus {
-    outline: none;
-    filter: brightness(.5)
-  }
-  span[contenteditable="true"]:focus-visible {
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.badge--active {
+  background-color: #21c2e1;
+  color: #fff;
+  border-color: #21c2e1;
+}
+
+/*
+  * Content Editable - Pseudo Inputs
+*/
+[contenteditable] {
+  min-width: 4rem;
+  max-width: 7rem;
+  white-space: nowrap;
+  overflow: hidden;
+  border: 1px solid #ddd;
+  padding: .25rem .75rem;
+  border-radius: 1rem;
+  font-size: .9rem;
+
+  &:focus {
     outline: none
   }
+  &:focus-visible {
+    border-color: #999;
+    outline: none
+  }
+  &:empty:before {
+    color: #999;
+    content: attr(data-placeholder)
+  }
 }
-
 
 /* 
-  * Range Slide 
+  * Drawer
 */
-.range-slider {
-  width: 100%;
-  text-align: center;
-  position: relative;
+.drawer {
+  width: 0px;
+  box-shadow: .5rem .75rem 1rem #88888875;
+  transition: .2s ease width;
+  z-index: 100
+}
+
+.drawer--active {
+  width: 45vw;
+  padding: .5rem
+}
+
+.drawer__image {
   display: flex;
-  place-items: center;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 1rem;
+  img {
+    height: 100%;
+    width: auto;
+  }
 }
 
-.range-slider .rangeValues {
-  display: block;
-  box-shadow: 0 0 20px rgba(0,139,253,0.25);
-  padding: 20px;
-  font-size: 22px;
-  margin-bottom: 35px;
+@media screen and (max-width: 768px) {
+  .drawer--active {
+    width: 100vw
+  }
 }
 
-input[type=range] {
-  -webkit-appearance: none;
-  border: 1px solid white;
-  width: 100%;
-  position: absolute;
-  left: 0;
-}
-
-input[type=range]::-webkit-slider-runnable-track {
-  width: 100%;
-  height: .35rem;
-  background: #ddd;
-  border: none;
-  border-radius: .2rem;
-}
-
-input[type=range]::-webkit-slider-thumb {
-  -webkit-appearance: none;
-  border: none;
-  height: 1rem;
+/*
+  * SVG
+*/
+.svg-small svg {
   width: 1rem;
-  border-radius: 50%;
-  background: #21c2e1;
-  margin-top: -6px;
-  cursor: pointer;
-  position: relative;
-  z-index: 1;
-}
-
-input[type=range]:focus {
-  outline: none;
-}
-
-input[type=range]:focus::-webkit-slider-runnable-track {
-  background: #ccc;
-}
-
-input[type=range]::-moz-range-track {
-  width: 100%;
-  height: .35rem;
-  background: #ddd;
-  border: none;
-  border-radius: 3px;
-}
-
-input[type=range]::-moz-range-thumb {
-  border: none;
-  height: 1rem;
-  width: 1rem;
-  border-radius: 50%;
-  background: #21c1ff;
-}
-
-/*hide the outline behind the border*/
-input[type=range]:-moz-focusring {
-  outline: 1px solid white;
-  outline-offset: -1px;
-}
-
-input[type=range]::-ms-track {
-  width: 100%;
-  height: .35rem;
-  /*remove bg colour from the track, we'll use ms-fill-lower and ms-fill-upper instead */
-  background: transparent;
-  /*leave room for the larger thumb to overflow with a transparent border */
-  border-color: transparent;
-  border-width: .35rem 0;
-  /*remove default tick marks*/
-  color: transparent;
-  z-index: -4;
-}
-
-input[type=range]::-ms-fill-lower {
-  background: #777;
-  border-radius: .75rem;
-}
-
-input[type=range]::-ms-fill-upper {
-  background: #ddd;
-  border-radius: .75rem;
-}
-
-input[type=range]::-ms-thumb {
-  border: none;
-  height: 1rem;
-  width: 1rem;
-  border-radius: 50%;
-  background: #21c1ff;
-}
-
-input[type=range]:focus::-ms-fill-lower {
-  background: #888;
-}
-
-input[type=range]:focus::-ms-fill-upper {
-  background: #ccc;
+  height: 1rem
 }
