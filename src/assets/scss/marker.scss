@@ -12,6 +12,7 @@
   position: relative;
   cursor: pointer;
   transition: .2s ease filter, .2s ease transform;
+  z-index: 10;
   &:hover {
     filter: brightness(.9);
     transform: scale(1.05)
@@ -29,4 +30,19 @@
 .currency-unit,
 .currency-value {
   font-weight: bold
+}
+
+.markerInformation {
+  position: absolute;
+  bottom: calc(100% + .5rem);
+  left: calc(-75%);
+  width: 250%;
+  color: #070A2B;
+  transform: scale(0);
+  transition: .2s ease transform;
+  z-index: 10000000
+}
+
+.markerInformation--open {
+  transform: scale(1)
 }
