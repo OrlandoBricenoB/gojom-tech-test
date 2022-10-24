@@ -1,6 +1,6 @@
 # Gojom Tech Test - Orlando Briceño.
 
-![Preview del Proyecto](https://raw.githubusercontent.com/OrlandoBricenoB/gojom-tech-test/main/src/docs/preview.png?token=GHSAT0AAAAAAB2AODURBZDJOQLLW5R3RYO6Y2WNCCA)
+![Preview del Proyecto](https://raw.githubusercontent.com/OrlandoBricenoB/gojom-tech-test/main/src/docs/preview.png?token=GHSAT0AAAAAAB2AODURYD5TXWB5G3PLYB6KY2WSTPA)
 
 ## Descripción
 
