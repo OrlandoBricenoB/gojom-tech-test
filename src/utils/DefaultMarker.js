@@ -1,4 +1,5 @@
 const DefaultMarker = ({
+  internal_id: id,
   map,
   Marker,
   position,
@@ -19,6 +20,10 @@ const DefaultMarker = ({
     position,
     icon: isVisible ? null : svgMarker
   })
+
+  marker.internal_id = id
+
+  window.defaultMarkerList.push(marker)
 
   return marker
 }
