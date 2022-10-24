@@ -45,7 +45,7 @@ function initMap () {
     }))
 
     // * Clusterer
-    MarkerClusterer({
+    const cluster = new MarkerClusterer({
       markers: defaultMarkers,
       map
     })
@@ -55,7 +55,7 @@ function initMap () {
       displayMarkers({ markers, defaultMarkers, map })
     }, 500)
 
-    return [markers, defaultMarkers]
+    return [markers, defaultMarkers, cluster]
   }
 
   // * Create markers with Real Estate Data.
