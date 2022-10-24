@@ -6,7 +6,7 @@ const DrawerList = estateList => {
   <div class="flex items-center justify-between mb-3">
     <p class="text-gray-500 m-0">Se encontraron ${estateList.length} resultados en esta ubicación.</p>
     <div class="text-gray-500 cursor-pointer hover:text-gray-600 drawer__close">
-      <i data-feather="x-circle"></i>
+    <i class="fas fa-times-circle"></i>
     </div>
   </div>
   <!-- Drawer Close ENd -->`
@@ -27,7 +27,7 @@ const DrawerList = estateList => {
         estateData.location.address || estateData.location.district
         ? `<!-- Estate Address -->
           <div class="flex items-center gap-1 mb-2 text-sm text-gray-500">
-            <i data-feather="map-pin"></i>
+          <i class="fas fa-map-marker-alt"></i>
             <p class="whitespace-nowrap overflow-hidden text-ellipsis">${estateData.location.address || estateData.location.district}</p>
           </div>
           <!-- Estate Address END-->`

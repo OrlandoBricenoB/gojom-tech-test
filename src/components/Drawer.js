@@ -91,7 +91,5 @@ observer.subscribe({
       // * If dont have close button, close this broken drawer.
       observer.notify('drawer', { status: false })
     }
-
-    window.feather.replace()
   }
 })

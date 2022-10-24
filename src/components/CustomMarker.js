@@ -1,6 +1,3 @@
-import moonIcon from '../svgs/moon'
-import triangleIcon from '../svgs/triangle'
-import dropletIcon from '../svgs/droplet'
 import cleanCharacteristicValue from '../utils/cleanCharacteristicValue'
 import { getEstatePosition } from '../api/Database'
 import observer from '../api/Observer'
@@ -38,29 +35,29 @@ const CustomMarker = ({
     ${address ? `<p class="text-xs text-gray-500">${address}</p>` : ''}
     <div class="flex flex-wrap items-center gap-x-2 text-xs">
       ${bedrooms
-? `<div class="flex items-center gap-1 svg-small">
-        <p>
-          ${cleanCharacteristicValue('bedrooms', bedrooms)}
-        </p>
-        ${moonIcon()}
-      </div>`
- : ''}
+      ? `<div class="flex items-center gap-1 svg-small">
+          <i class="fas fa-bed"></i>
+          <p>
+            ${cleanCharacteristicValue('bedrooms', bedrooms)}
+          </p>
+        </div>`
+      : ''}
       ${bathrooms
-? `<div class="flex items-center gap-1 svg-small">
-        <p>
-          ${cleanCharacteristicValue('bathrooms', bathrooms)}
-        </p>
-        ${dropletIcon()}
-      </div>`
- : ''}
+      ? `<div class="flex items-center gap-1 svg-small">
+          <i class="fas fa-bath"></i>
+          <p>
+            ${cleanCharacteristicValue('bathrooms', bathrooms)}
+          </p>
+        </div>`
+      : ''}
       ${totalArea
-? `<div class="flex items-center gap-1 svg-small">
-        <p>
-          ${cleanCharacteristicValue('total_area', totalArea)}
-        </p>
-        ${triangleIcon()}
-      </div>`
- : ''}
+      ? `<div class="flex items-center gap-1 svg-small">
+          <i class="fas fa-ruler-combined"></i>
+          <p>
+            ${cleanCharacteristicValue('total_area', totalArea)}
+          </p>
+        </div>`
+      : ''}
     </div>
   </div>`
 

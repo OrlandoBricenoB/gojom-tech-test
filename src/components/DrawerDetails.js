@@ -10,7 +10,7 @@ const DrawerDetails = (estateData) => {
         <div class="py-1 text-sm text-pink-600 bg-pink-200 border-none badge">${capitalize(estateData.operation_type)}</div>
       </div>
       <div class="self-end text-gray-500 cursor-pointer hover:text-gray-600 drawer__close">
-        <i data-feather="x-circle"></i>
+      <i class="fas fa-times-circle"></i>
       </div>
     </div>
     <!-- Estate Type and Operation END -->`
@@ -32,7 +32,7 @@ const DrawerDetails = (estateData) => {
         estateData.location.address || estateData.location.district
         ? `<!-- Estate Address -->
           <div class="flex items-center gap-1 my-3 text-sm text-gray-500">
-            <i data-feather="map-pin"></i>
+            <i class="fas fa-map-marker-alt"></i>
             <p>${estateData.location.address || estateData.location.district}</p>
           </div>
           <!-- Estate Address END-->`
