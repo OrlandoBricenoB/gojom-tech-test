@@ -1,16 +1,12 @@
 const displayMarkers = ({ markers, defaultMarkers, map }) => {
   markers.forEach(marker => {
-    const markerPosition = {
-      lat: marker.ba.lat,
-      lng: marker.ba.lng
-    }
-
     const defaultMarker = defaultMarkers.find(defaultMarker => {
-      return defaultMarker.position.lat() === markerPosition.lat && defaultMarker.position.lng() === markerPosition.lng
+      return defaultMarker.internal_id === marker.internal_id
     })
 
     // * Display CustomMarker if defaultMarker is visible.
-    marker.map = defaultMarker.map ? map : null
+    marker.map = defaultMarker?.map ? map : null
+    return
   })
 }
 
