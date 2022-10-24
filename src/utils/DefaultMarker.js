@@ -22,9 +22,6 @@ const DefaultMarker = ({
   })
 
   marker.internal_id = id
-
-  window.defaultMarkerList.push(marker)
-
   return marker
 }
 

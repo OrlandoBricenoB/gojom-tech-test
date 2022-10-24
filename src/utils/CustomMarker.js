@@ -103,8 +103,6 @@ const CustomMarker = ({
   })
 
   marker.internal_id = id
-
-  window.markerList.push(marker)
   return marker
 }
 
